@@ -74,13 +74,13 @@ dependencies = []
 
 3. **Python 代码优化**
    - `autoflake`：移除未使用的 imports 和变量
-   - `pyupgrade`：自动升级代码到 Python 3.11+ 语法
+   - `pyupgrade`：自动升级代码到 Python 3.12+ 语法
 
 4. **安全检查**
    - `bandit`：扫描 Python 代码的安全漏洞（使用 `.bandit.yml` 配置）
 
 5. **静态类型检查**
-   - `mypy`：严格类型检查（Python 3.11 环境，忽略测试目录）
+   - `mypy`：严格类型检查（Python 3.12 环境，忽略测试目录）
 
 6. **拼写检查**
    - `codespell`：修复常见英文拼写错误（排除词表文件）
