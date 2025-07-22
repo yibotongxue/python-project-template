@@ -83,4 +83,4 @@ dependencies = []
    - `mypy`：严格类型检查（Python 3.12 环境，忽略测试目录）
 
 6. **拼写检查**
-   - `codespell`：修复常见英文拼写错误（排除词表文件）
+   - `codespell`：修复常见英文拼写错误

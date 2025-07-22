@@ -63,7 +63,3 @@ repos:
     hooks:
       - id: codespell
         additional_dependencies: [".[toml]"]
-        exclude: |
-          (?x)(
-            ^docs/source/spelling_wordlist.txt$
-          )
