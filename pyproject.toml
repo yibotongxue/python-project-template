@@ -14,7 +14,7 @@ include = '\.pyi?$'
 [tool.isort]
 profile = "black"
 line_length = 88
-src_paths = ["src", "test"]
+src_paths = ["src", "tests"]
 
 [tool.mypy]
 strict = true

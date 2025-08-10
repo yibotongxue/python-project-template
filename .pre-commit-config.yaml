@@ -41,10 +41,10 @@ repos:
     hooks:
       - id: bandit
         args: ["-c", ".bandit.yml"]
-        exclude: ^test/
+        exclude: ^tests/
       - id: bandit
         args: ["-c", ".bandit.yml", "-s", "B101"]
-        files: ^test/
+        files: ^tests/
 
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.10.0
@@ -56,7 +56,7 @@ repos:
           --show-error-codes,
           --python-version=3.12
         ]
-        exclude: ^test/
+        exclude: ^tests/
 
   - repo: https://github.com/codespell-project/codespell
     rev: v2.3.0
