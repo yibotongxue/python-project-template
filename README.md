@@ -42,7 +42,7 @@ pre-commit install
 
 ## 适配
 
-一般的，可以修改 `src` 为自己的目录名，并同步修改[pyproject.toml](./pyproject.toml)中的相关内容。可以将[pyproject.toml](./pyproject.toml)中的如下内容
+一般的，可以修改 `src/python_project_template` 为自己的目录名，并同步修改[pyproject.toml](./pyproject.toml)中的相关内容。可以将[pyproject.toml](./pyproject.toml)中的如下内容
 
 ```toml
 [project]
