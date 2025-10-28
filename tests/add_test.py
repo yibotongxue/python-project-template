@@ -1,4 +1,4 @@
-from src.add import add
+from python_project_template.add import add
 
 
 def test_add():

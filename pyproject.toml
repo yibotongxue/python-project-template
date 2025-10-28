@@ -24,17 +24,14 @@ show_error_codes = true
 disable_error_code = []
 
 [build-system]
-requires = ["setuptools>=61.0", "wheel"]
-build-backend = "setuptools.build_meta"
+requires = ["uv_build>=0.9.5,<0.10.0"]
+build-backend = "uv_build"
 
 [dependency-groups]
 dev = [
     "pre-commit>=4.2.0",
     "pytest>=8.4.1",
 ]
-
-[tool.setuptools]
-packages = ["src"]
 
 [tool.uv]
 index-url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"
