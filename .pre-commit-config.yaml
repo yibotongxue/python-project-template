@@ -2,7 +2,7 @@
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
+    rev: v6.0.0
     hooks:
       - id: check-symlinks
       - id: destroyed-symlinks
@@ -18,15 +18,15 @@ repos:
       - id: detect-private-key
       - id: debug-statements
   - repo: https://github.com/PyCQA/isort
-    rev: 5.13.2
+    rev: 7.0.0
     hooks:
       - id: isort
   - repo: https://github.com/psf/black
-    rev: 24.10.0
+    rev: 26.1.0
     hooks:
       - id: black-jupyter
   - repo: https://github.com/asottile/pyupgrade
-    rev: v3.19.1
+    rev: v3.21.2
     hooks:
       - id: pyupgrade
         args: [--py312-plus]
@@ -37,7 +37,7 @@ repos:
         args: [--remove-all-unused-imports, --in-place, --ignore-init-module-imports, --remove-duplicate-keys, --remove-unused-variables]
 
   - repo: https://github.com/PyCQA/bandit
-    rev: 1.7.7
+    rev: 1.9.3
     hooks:
       - id: bandit
         args: ["-c", ".bandit.yml"]
@@ -46,20 +46,17 @@ repos:
         args: ["-c", ".bandit.yml", "-s", "B101"]
         files: ^tests/
 
-  - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.10.0
+  - repo: local
     hooks:
-      - id: mypy
-        args: [
-          --ignore-missing-imports,
-          --strict,
-          --show-error-codes,
-          --python-version=3.12
-        ]
-        exclude: ^tests/
+      - id: pyright
+        name: Pyright type check
+        entry: uv run pyright
+        language: system
+        types: [python]
+        pass_filenames: true
 
   - repo: https://github.com/codespell-project/codespell
-    rev: v2.3.0
+    rev: v2.4.1
     hooks:
       - id: codespell
         additional_dependencies: [".[toml]"]
