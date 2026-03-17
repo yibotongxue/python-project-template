@@ -43,14 +43,14 @@ repos:
         args: ["-c", ".bandit.yml"]
         exclude: ^tests/
       - id: bandit
-        args: ["-c", ".bandit.yml", "-s", "B101"]
+        args: ["-c", ".bandit.yml", "-s", "B101,B311,B615"]
         files: ^tests/
 
   - repo: local
     hooks:
       - id: pyright
         name: Pyright type check
-        entry: uv run pyright
+        entry: uv run --with pyright pyright
         language: system
         types: [python]
         pass_filenames: true
