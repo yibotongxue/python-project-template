@@ -40,11 +40,7 @@ repos:
     rev: 1.9.3
     hooks:
       - id: bandit
-        args: ["-c", ".bandit.yml"]
-        exclude: ^tests/
-      - id: bandit
         args: ["-c", ".bandit.yml", "-s", "B101,B311,B615"]
-        files: ^tests/
 
   - repo: local
     hooks:
